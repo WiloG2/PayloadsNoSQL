@@ -1,7 +1,7 @@
 [
     {
         "id": "cypher-id-001",
-        "description": "Prueba2",
+        "description": "Payload clásico de comilla simple para romper contexto de cadena.",
         "payload": "'",
         "severity": "medium",
         "category": "error_based"
