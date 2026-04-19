@@ -1,0 +1,163 @@
+[
+    {
+      "id": "mongo-detect-001",
+      "description": "auto",
+      "severity": "low",
+      "payload": "true, $where: '1 == 1'",
+      "category": "boolean-based"
+    },
+    {
+      "id": "mongo-detect-002",
+      "description": "auto",
+      "severity": "low",
+      "payload": "{\"$where\": \"this.username === '{}'\"}",
+      "category": "boolean-based"
+    },
+    {
+      "id": "mongo-detect-009",
+      "description": "auto",
+      "severity": "low",
+      "payload": "db.collection.find({$where: \"this.password.length >= 12\"})",
+      "category": "boolean-based"
+    },
+    {
+      "id": "mongo-detect-010",
+      "description": "auto",
+      "severity": "low",
+      "payload": "{\"$where\": \"this.age >= {}\"}",
+      "category": "boolean-based"
+    },
+    {
+      "id": "mongo-detect-011",
+      "description": "auto",
+      "severity": "low",
+      "payload": "{\"$where\": \"this.username == '{}'\"}",
+      "category": "boolean-based"
+    },
+    {
+      "id": "mongo-detect-012",
+      "description": "auto",
+      "severity": "low",
+      "payload": "{\"user\": {\"$exists\": true}, \"password\": {\"$exists\": true}}",
+      "category": "boolean-based"
+    },
+    {
+      "id": "mongo-detect-013",
+      "description": "auto",
+      "severity": "low",
+      "payload": "{\"user\": {\"$exists\": false}, \"password\": {\"$exists\": false}}",
+      "category": "boolean-based"
+    },
+    {
+      "id": "mongo-detect-015",
+      "description": "auto",
+      "severity": "low",
+      "payload": "{\"name\": {\"$mod\": [5, 0]}}",
+      "category": "boolean-based"
+    },
+    {
+      "id": "mongo-detect-016",
+      "description": "auto",
+      "severity": "low",
+      "payload": "{\"$where\": \"this.password.length > 10\"}",
+      "category": "boolean-based"
+    },
+    {
+      "id": "mongo-detect-017",
+      "description": "auto",
+      "severity": "low",
+      "payload": "{\"$where\": \"this.age <= {}\"}",
+      "category": "boolean-based"
+    },
+    {
+      "id": "mongo-detect-018",
+      "description": "auto",
+      "severity": "low",
+      "payload": "{\"name\": {\"$type\": 2}}",
+      "category": "boolean-based"
+    },
+    {
+      "id": "mongo-detect-019",
+      "description": "auto",
+      "severity": "low",
+      "payload": "{\"name\": {\"$type\": 16}}",
+      "category": "boolean-based"
+    },
+    {
+      "id": "mongo-detect-020",
+      "description": "auto",
+      "severity": "low",
+      "payload": "{\"username\": {\"$exists\": false}, \"password\": {\"$exists\": true}}",
+      "category": "boolean-based"
+    },
+    {
+      "id": "mongo-detect-023",
+      "description": "auto",
+      "severity": "low",
+      "payload": "{\"$where\": \"this.password.length <= 5\"}",
+      "category": "boolean-based"
+    },
+    {
+      "id": "mongo-detect-024",
+      "description": "auto",
+      "severity": "low",
+      "payload": "{\"$where\": \"this.age > 20 && this.gender === 'male'\"}",
+      "category": "boolean-based"
+    },
+    {
+      "id": "mongo-detect-025",
+      "description": "auto",
+      "severity": "low",
+      "payload": "{\"name\": {\"$type\": 4}}",
+      "category": "boolean-based"
+    },
+    {
+      "id": "mongo-detect-026",
+      "description": "auto",
+      "severity": "low",
+      "payload": "{\"name\": {\"$type\": 17}}",
+      "category": "boolean-based"
+    },
+    {
+      "id": "mongo-detect-027",
+      "description": "auto",
+      "severity": "low",
+      "payload": "{\"name\": {\"$exists\": true}, \"password\": {\"$exists\": false}}",
+      "category": "boolean-based"
+    },
+    {
+      "id": "mongo-detect-030",
+      "description": "auto",
+      "severity": "low",
+      "payload": "{\"$where\": \"this.password.length > 8 && this.name === 'admin'\"}",
+      "category": "boolean-based"
+    },
+    {
+      "id": "mongo-detect-031",
+      "description": "auto",
+      "severity": "low",
+      "payload": "{\"$where\": \"this.age > 30 && this.gender === 'female'\"}",
+      "category": "boolean-based"
+    },
+    {
+      "id": "mongo-detect-032",
+      "description": "auto",
+      "severity": "low",
+      "payload": "{\"name\": {\"$type\": 5}}",
+      "category": "boolean-based"
+    },
+    {
+      "id": "mongo-detect-033",
+      "description": "auto",
+      "severity": "low",
+      "payload": "{\"name\": {\"$type\": 20}}",
+      "category": "boolean-based"
+    },
+    {
+      "id": "mongo-detect-034",
+      "description": "auto",
+      "severity": "low",
+      "payload": "{\"name\": {\"$exists\": false}, \"password\": {\"$exists\": true}}",
+      "category": "boolean-based"
+    }
+]
